@@ -6,8 +6,8 @@ import brain from './artificial-intelligence.png';
 const Logo = () => {
   return (
     <div className='ma4 mt0'>
-      <Tilt className="Tilt " options={{ max : 55 }} style={{ height: 150, width: 150 }} >
-      <div className="Tilt-inner "> <img src={brain} alt="brain" /> </div>
+      <Tilt className="Tilt .br5 " options={{ max : 55 }} style={{ height: 150, width: 150 }} >
+      <div className="Tilt-inner icon"><img src={brain} alt="brain" /> </div>
       </Tilt>
     </div>
   );

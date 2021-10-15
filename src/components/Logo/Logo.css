@@ -1,3 +1,10 @@
 .Tilt {
-  background: linear-gradient(6deg, rgba(237,231,232,1) 0%, rgba(221,221,230,1) 54%, rgba(0,0,0,1) 100%);
+  display: flex;
+  justify-content: center;
+  border-radius: .5em;
+background: linear-gradient(0deg, rgba(237,231,232,1) 0%, rgba(182,182,186,1) 92%, rgba(182,182,182,1) 100%);
+}
+
+.icon {
+  align-self: center;
 }
