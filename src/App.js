@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
@@ -10,7 +10,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <Logo />
-        <ImageLinkForm />
+        <ImageLinkForm className='ImageLinkForm'/>
         {/* <FaceRocognition /> */}
 
       </div>

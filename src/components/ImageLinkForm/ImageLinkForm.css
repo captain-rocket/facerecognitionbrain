@@ -1,0 +1,17 @@
+.iLF {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+p {
+  align-self: center;
+}
+
+input {
+  align-self: center;
+  width: 50vw;
+}
+button {
+  align-self: center;
+}
