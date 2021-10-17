@@ -11,6 +11,7 @@ class App extends Component {
       <div className="App">
         <Navigation />
         <Logo />
+        <Rank />
         <ImageLinkForm className='ImageLinkForm'/>
         {/* <FaceRocognition /> */}
 

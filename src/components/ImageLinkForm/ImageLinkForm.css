@@ -1,4 +1,76 @@
+@media only screen and (max-width: 600px) {
+    #inputContainer {
+      flex-direction: column;
+      width: 90vw;
+  }
+  #formInput {
+    align-self: center;
+  }
+  #formButton {
+  align-self: center;
+  }
 
+}
+@media only screen and (max-width: 1600px) {
+    #inputContainer {
+      width: 50vw;
+  }
+  #formInput {
+    align-self: center;
+  }
+  #formButton {
+  align-self: center;
+  }
+
+}
+@media only screen and (max-width: 1300px) {
+    #inputContainer {
+      width: 55vw;
+  }
+  #formInput {
+    align-self: center;
+  }
+  #formButton {
+  align-self: center;
+  }
+
+}
+@media only screen and (max-width: 1200px) {
+    #inputContainer {
+      width: 60vw;
+  }
+  #formInput {
+    align-self: center;
+  }
+  #formButton {
+  align-self: center;
+  }
+
+}
+@media only screen and (max-width: 1000px) {
+    #inputContainer {
+      width: 65vw;
+  }
+  #formInput {
+    align-self: center;
+  }
+  #formButton {
+  align-self: center;
+  }
+}
+
+@media only screen and (max-width: 8500px) {
+    #inputContainer {
+      width: 70vw;
+  }
+  #formInput {
+    align-self: center;
+  }
+  #formButton {
+  align-self: center;
+  }
+
+}
 
 .form {
   width: 40vw;
@@ -7,7 +79,18 @@
 
 p {
   align-self: center;
+  bottom: var(--green-border);
+}
+
+#inputContainer {
+padding-left: 1.5rem;
+}
+
+#formInput {
+  width: 100%;
+  margin: .5rem;
 }
 button {
   align-self: center;
+  padding-top: .5rem;
 }
