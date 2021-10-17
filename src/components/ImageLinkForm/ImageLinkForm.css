@@ -1,15 +1,4 @@
-.dfr {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-}
-.dfc {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-}
+
 
 .form {
   width: 40vw;
@@ -17,5 +6,8 @@
 }
 
 p {
+  align-self: center;
+}
+button {
   align-self: center;
 }
