@@ -1,17 +1,21 @@
-.iLF {
+.dfr {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-content: center;
+}
+.dfc {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.form {
+  width: 40vw;
+  background: radial-gradient(circle, rgba(237,231,232,1) 0%, rgba(182,182,186,1) 85%, rgba(182,182,182,1) 100%);
 }
 
 p {
-  align-self: center;
-}
-
-input {
-  align-self: center;
-  width: 50vw;
-}
-button {
   align-self: center;
 }

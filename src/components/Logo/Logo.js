@@ -6,7 +6,7 @@ import brain from './artificial-intelligence.png';
 const Logo = () => {
   return (
     <Tilt
-      className="parallax-effect-glare-scale test tilt"
+      className="parallax-effect-glare-scale tilt shadow-5"
       perspective={500}
       glareEnable={true}
       glareMaxOpacity={1.0}

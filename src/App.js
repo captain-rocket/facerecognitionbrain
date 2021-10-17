@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
+import Rank from './components/Rank/Rank';
 
 class App extends Component {
   render () {
