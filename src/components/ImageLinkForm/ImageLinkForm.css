@@ -1,3 +1,8 @@
+.form {
+  width: 40vw;
+  background: radial-gradient(circle, rgba(237,231,232,1) 0%, rgba(182,182,186,1) 85%, rgba(182,182,182,1) 100%);
+}
+
 @media only screen and (max-width: 600px) {
     #inputContainer {
       flex-direction: column;
@@ -59,10 +64,11 @@
   }
 }
 
-@media only screen and (max-width: 8500px) {
+@media only screen and (max-width: 850px) {
     #inputContainer {
       width: 70vw;
   }
+}
   #formInput {
     align-self: center;
   }
@@ -70,12 +76,6 @@
   align-self: center;
   }
 
-}
-
-.form {
-  width: 40vw;
-  background: radial-gradient(circle, rgba(237,231,232,1) 0%, rgba(182,182,186,1) 85%, rgba(182,182,182,1) 100%);
-}
 
 p {
   align-self: center;
@@ -93,4 +93,4 @@ padding-left: 1.5rem;
 button {
   align-self: center;
   padding-top: .5rem;
-}
+} 
