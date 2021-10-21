@@ -6,6 +6,7 @@ import Logo from './components/Logo/Logo';
 import Navigation from './components/Navigation/Navigation';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
+import FaceRocognition from './components/FaceRocognition/FaceRocognition';
 
 const app = new Clarifai.App({
  apiKey: '4c689cfbfe1c4a27b7faebaa29fef359'
@@ -35,16 +36,19 @@ class App extends Component {
     super();
     this.state = {
       input: '',
+      imageUrl: ''
     }
   }
 
 onInputChange = (event) => {
-  console.log(event.target.value);  
+  this.setState({input: event.target.value});  
 }
 
 onButtonSubmit = () => {
-  app.models.predict(Clarifai.FACE_DETECT_MODEL, 'https://www.getolympus.com/media/wysiwyg/cms_pages/black-and-white-street-photography/OLY.B-W_Tips_6.jpg').then( function(response) {
-
+  this.setState({imageUrl: this.state.input});
+  app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then( function(response) {
+    console.log(response.outputs[0].data.regions[0].region_info.bounding_box);
+    
   },
   function(err) {
     
@@ -64,7 +68,7 @@ onButtonSubmit = () => {
         onInputChange={this.onInputChange}
         onButtonSubmit={this.onButtonSubmit}
         className='ImageLinkForm'/>
-        {/* <FaceRocognition /> */}
+        <FaceRocognition imageUrl={this.state.imageUrl}/>
 
       </div>
     );
