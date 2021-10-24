@@ -94,3 +94,7 @@ button {
   align-self: center;
   padding-top: .5rem;
 } 
+
+#formInput {
+  font-family: Arial, Helvetica, sans-serif;
+}
