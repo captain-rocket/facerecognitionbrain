@@ -40,3 +40,7 @@ code {
 button {
   cursor: pointer;
 }
+
+#homeLink {
+  display: block;
+}
