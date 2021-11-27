@@ -123,14 +123,14 @@ onButtonSubmit = () => {
   .catch(err => console.log(err));
 }
 
-onRouteChangeOld = (route) => {
-  if (route === 'signout') {
-    this.setState(initialState)
-  } else if (route === 'home') {
-    this.setState({isSignedIn: true})
-  }
-  this.setState({route: route})
-} 
+// onRouteChangeOld = (route) => {
+//   if (route === 'signout') {
+//     this.setState(initialState)
+//   } else if (route === 'home') {
+//     this.setState({isSignedIn: true})
+//   }
+//   this.setState({route: route})
+// } 
 
 onRouteChange = (route) => {
   switch (route) {
@@ -139,19 +139,23 @@ onRouteChange = (route) => {
       break;
     case 'home':
       this.setState({isSignedIn: true})
-      setTimeout(() => {
+      document.getElementById('profileLink').style.display = 'block';
         document.getElementById('homeLink').style.display = 'none';
-      }, 0);
       break;
       case 'profile':
         this.setState({route: 'profile'})
         document.getElementById('homeLink').style.display = 'block';
+        document.getElementById('profileLink').style.display = 'none';
         break;
     default:
       
       break;
   }
-  this.setState({route: route})
+  route === 'signout'
+  ?
+    this.setState({route: 'signin'})
+  :  
+    this.setState({route: route})
 }
 
 
