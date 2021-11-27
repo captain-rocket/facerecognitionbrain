@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
 import Navigation from './components/Navigation/Navigation';
 import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
@@ -13,9 +12,7 @@ import Profile from './components/Profile/Profile';
 // import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 
 
-const app = new Clarifai.App({
- apiKey: '4c689cfbfe1c4a27b7faebaa29fef359'
-});
+
 
 const particlesOptions = {
 	    "particles": {
@@ -78,7 +75,6 @@ calculateFaceLocation = (data) => {
   const image = document.getElementById('inputImage');
   const width = Number(image.width);
   const height = Number(image.height);
-  console.log(width, height);
   return {
     leftCol: clarifaiFace.left_col * width,
     topRow: clarifaiFace.top_row * height,
@@ -99,9 +95,14 @@ onInputChange = (event) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-  app.models.predict(
-    Clarifai.FACE_DETECT_MODEL, 
-    this.state.input)
+    fetch('http://localhost:3000/imageUrl', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+      input: this.state.input
+    })
+  })
+    .then(response => response.json())
     .then(response => {
     if (response) {
       fetch('http://localhost:3000/image', {
@@ -140,7 +141,7 @@ onRouteChange = (route) => {
       this.setState({isSignedIn: true})
       setTimeout(() => {
         document.getElementById('homeLink').style.display = 'none';
-      }, 1000);
+      }, 0);
       break;
       case 'profile':
         this.setState({route: 'profile'})
