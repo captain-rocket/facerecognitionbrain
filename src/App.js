@@ -6,13 +6,6 @@ import SignIn from './components/SignIn/SignIn';
 import Register from './components/Register/Register';
 import ImageDetectInterface from './components/ImageDetectInterface/ImageDetectInterface';
 import Profile from './components/Profile/Profile';
-// import Logo from './components/Logo/Logo';
-// import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
-// import Rank from './components/Rank/Rank';
-// import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-
-
-
 
 const particlesOptions = {
 	    "particles": {
@@ -48,7 +41,6 @@ const initialState = {
       isSignedIn: false
     }
   
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -64,12 +56,6 @@ loadUser = (data) => {
   }}) 
 }
 
-//  componentDidMount() {
-//    fetch('http://localhost:3000/')
-//    .then(response => response.json())
-//    .then(console.log)
-//  }
-
 calculateFaceLocation = (data) => {
   const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box
   const image = document.getElementById('inputImage');
@@ -83,9 +69,7 @@ calculateFaceLocation = (data) => {
   }  
 }
 
-
-
- displayFaceBox = (box) => {
+displayFaceBox = (box) => {
    this.setState({box: box})
  }
 
@@ -123,15 +107,6 @@ onButtonSubmit = () => {
   .catch(err => console.log(err));
 }
 
-// onRouteChangeOld = (route) => {
-//   if (route === 'signout') {
-//     this.setState(initialState)
-//   } else if (route === 'home') {
-//     this.setState({isSignedIn: true})
-//   }
-//   this.setState({route: route})
-// } 
-
 onRouteChange = (route) => {
   switch (route) {
     case 'signout':
@@ -147,8 +122,7 @@ onRouteChange = (route) => {
         document.getElementById('homeLink').style.display = 'block';
         document.getElementById('profileLink').style.display = 'none';
         break;
-    default:
-      
+    default: 
       break;
   }
   route === 'signout'
@@ -157,7 +131,6 @@ onRouteChange = (route) => {
   :  
     this.setState({route: route})
 }
-
 
   render () {
    const { isSignedIn, imageUrl, route, box } = this.state;

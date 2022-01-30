@@ -8,6 +8,7 @@ class SignIn extends React.Component {
     signInPassword: ''
     }
   }
+  
   onEmailChange = (event) => {
     this.setState({signInEmail: event.target.value})
   }
@@ -70,8 +71,8 @@ return (
           <p onClick={() => onRouteChange('register')} className="f6 link dim black db pointer">Register</p>
         </div>
       </div>
-  </main>
-</article>
+    </main>
+  </article>
   );
   }
 }

@@ -2,7 +2,6 @@ import React from "react";
 
 const Rank = ({ name, entries }) => {
   return (
-    
     <div className='dfc tc'>
       <div className=' white f3'>
       {`${name}, you current entry count is...`}
