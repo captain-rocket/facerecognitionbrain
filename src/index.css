@@ -1,5 +1,9 @@
 html {
-  height: 100%;
+  background: linear-gradient(6deg, rgba(221,221,230,1) 0%, rgba(177,1,26,1) 39%, rgba(255,0,0,1) );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 @font-face {
   font-family: 'membra';
@@ -9,14 +13,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: membra, serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-
-  background: linear-gradient(6deg, rgba(221,221,230,1) 0%, rgba(177,1,26,1) 39%, rgba(255,0,0,1) 100%);
-  background-repeat: no-repeat;
 }
 
 code {
